@@ -1,0 +1,40 @@
+{
+  "name": "tdd",
+  "version": "1.0.0",
+  "private": true,
+  "license": "MIT",
+  "author": "Dalius <daliusd@wix.com>",
+  "publishConfig": {
+    "registry": "none"
+  },
+  "main": "src/index.js",
+  "scripts": {
+    "build": ":",
+    "test": "jest --coverage",
+    "watch": "jest --watch",
+    "release": ":"
+  },
+  "dependencies": {
+    "lodash": "^4.17.15",
+    "prettier": "^3.1.0"
+  },
+  "devDependencies": {
+    "jest": "^25.3.0"
+  },
+  "jest": {
+    "roots": [
+      "<rootDir>/node_modules/",
+      "<rootDir>/src/"
+    ],
+    "resetMocks": true,
+    "resetModules": true,
+    "coverageThreshold": {
+      "global": {
+        "branches": 100,
+        "functions": 100,
+        "lines": 100,
+        "statements": 100
+      }
+    }
+  }
+}
